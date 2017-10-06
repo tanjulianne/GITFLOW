@@ -42,6 +42,42 @@ def drawDiamond(height):
 	# END CODE HERE					                                           #
 	############################################################################
 
+def drawXSquare(side):
+	############################################################################
+	# TODO: Implement this code segment                                        #
+    ############################################################################
+                
+	############################################################################
+	# END CODE HERE					                                           #
+	############################################################################
+
+def drawClockwiseSpiral(side):
+	############################################################################
+	# TODO: Implement this code segment                                        #
+    ############################################################################
+                
+	############################################################################
+	# END CODE HERE					                                           #
+	############################################################################
+
+def drawCounterClockwiseSpiral(side):
+	############################################################################
+	# TODO: Implement this code segment                                        #
+    ############################################################################
+                
+	############################################################################
+	# END CODE HERE					                                           #
+	############################################################################
+
+def drawZigzag(length, oscillation):
+	############################################################################
+	# TODO: Implement this code segment                                        #
+    ############################################################################
+                
+	############################################################################
+	# END CODE HERE					                                           #
+	############################################################################
+
 print("----------------------------Shape Printer----------------------------")
 while True:
 	resp = 0
@@ -51,13 +87,17 @@ while True:
 		print("[2] - Rectangle")
 		print("[3] - Right Triangle")
 		print("[4] - Diamond")
-		print("[5] - Exit")
+		print("[5] - X-Square")
+		print("[6] - Clockwise Spiral")
+		print("[7] - Counter-Clockwise Spiral")
+		print("[8] - Zigzag")
+		print("[9] - Exit")
 		try:
 			resp = int(input("Response: "))
-			if resp >= 1 and resp <= 5:
+			if resp >= 1 and resp <= 9:
 				break
 			else:
-				print("Response must be from 1 to 5")
+				print("Response must be from 1 to 9")
 		except ValueError:
 			print("Input must be a number")
 
@@ -75,4 +115,17 @@ while True:
 		height = int(input("Enter height: "))
 		drawDiamond(height)
 	elif resp == 5:
+		side = int(input("Enter side length: "))
+		drawXSquare(side)
+	elif resp == 6:
+		side = int(input("Enter side length: "))
+		drawClockwiseSpiral(side)
+	elif resp == 7:
+		side = int(input("Enter side length: "))
+		drawCounterClockwiseSpiral(side)
+	elif resp == 8:
+		length = int(input("Enter length: "))
+		oscillation = int(input("Enter oscillation: "))
+		drawZigzag(length, oscillation)
+	elif resp == 9:
 		break
